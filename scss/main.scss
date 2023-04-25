@@ -7,5 +7,20 @@ $font-stak: 'IBM Plex Sans', sans-serif;
 body {
     margin: 0;
     padding: 0;
-    background-color: #a19c91;
+}
+.navbar {
+    background-color: $primary-color;
+    width: 100%;
+    height: 100px;
+}
+main {
+    background-color: $secondary-color;
+    width: 100%;
+    height: 100px;
+}
+#footer {
+    $background: red;
+    background-color: $background;
+    width: 100%;
+    height: 250px;
 }
