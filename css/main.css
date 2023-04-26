@@ -1,22 +1,24 @@
 body {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
+  background-color: white;
+  font-family: "IBM Plex Sans", sans-serif;
 }
 
-.navbar {
-  background-color: #a19c91;
+nav {
   width: 100%;
   height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-main {
-  background-color: #d5a518;
-  width: 100%;
-  height: 100px;
+nav p {
+  font-size: 1.5em;
+  margin: 0px;
 }
-
-.footer {
-  background-color: red;
-  width: 100%;
-  height: 250px;
+nav .icons button {
+  border: none;
+  background-color: white;
+  margin-top: 10px;
 }/*# sourceMappingURL=main.css.map */
