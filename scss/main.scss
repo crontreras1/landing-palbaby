@@ -4,6 +4,8 @@ $tertiary-color: #ad892a;
 $primary-text-color: #6c8484;
 $background: white;
 $font-stak: 'IBM Plex Sans', sans-serif;
+$button-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
 
 body {
     margin: 0px;
@@ -28,5 +30,79 @@ nav {
             background-color: $background;
             margin-top: 10px;
         }
+    }
+}
+article {
+    width: auto;
+    color: $primary-text-color;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    .image-section {
+        img {
+            width: 250px;
+            height: auto; 
+        }
+    }
+    .intro-section {
+        width: 80%;
+        h1 {
+            color: black;
+        }
+        button {
+            background-color: $secondary-color;
+            border-radius: 35px;
+            font-family: $font-stak;
+            font-weight: bold;
+            border-style: none;
+            width: 80%;
+            margin: 30px 0px;
+            padding: 20px;
+            cursor: pointer;
+            box-shadow: $button-shadow
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    // body {
+    //     // background-color: red;
+    // }
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        padding: 0px 50px;
+        .icons {
+            button {
+                background-color: $background;
+                svg {
+                    width: 26px;
+                    height: 26px;
+                }
+            }
+        }
+    }
+    article {
+        flex-direction: row;
+        width: 80%;
+        justify-content: space-between;
+        margin: auto;
+        .intro-section {
+            width: 50%;
+            text-align: left;
+        }
+    }
+}
+@media (min-width: 1280px) {
+    // body {
+    //     // background-color: blue;
+    // }
+    article {
+        justify-content: space-evenly;
+        margin: 120px;
     }
 }
