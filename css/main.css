@@ -67,9 +67,14 @@ section {
 section .cards-toy-section {
   width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
   padding: 0px;
+  row-gap: 50px;
+  -moz-column-gap: 50PX;
+       column-gap: 50PX;
+  margin-bottom: 50px;
 }
 section .cards-toy-section .product-card {
   width: 250px;
@@ -89,14 +94,21 @@ section .cards-toy-section .product-card .product-fav-icon {
   display: flex;
   justify-content: flex-end;
 }
-section .cards-toy-section .product-card img {
+section .cards-toy-section .product-card .product-image {
+  width: 230px;
+  height: 230px;
+}
+section .cards-toy-section .product-card .product-image img {
   width: 230px;
 }
 section .cards-toy-section .product-card .product-description {
   padding: 10px;
+  width: 80%;
+  padding-left: 20px;
 }
 section .cards-toy-section .product-card .product-description p {
   color: #6c8484;
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
@@ -126,6 +138,9 @@ section .cards-toy-section .product-card .product-description p {
   }
   section {
     padding: 40px;
+  }
+  section .cards-toy-section {
+    justify-content: flex-start;
   }
 }
 @media (min-width: 1280px) {
