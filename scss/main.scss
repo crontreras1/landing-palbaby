@@ -1,8 +1,9 @@
-$primary-color: #a19c91;
+$primary-color: #dad2c1;
 $secondary-color: #d5a518;
 $tertiary-color: #ad892a; 
 $primary-text-color: #6c8484;
 $background: white;
+$heart-icon: red;
 $font-stak: 'IBM Plex Sans', sans-serif;
 $button-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -29,6 +30,12 @@ nav {
             border: none;
             background-color: $background;
             margin-top: 10px;
+            cursor: pointer;
+        }
+        .wishlist {
+            path:hover{
+                stroke: $heart-icon;
+            }
         }
     }
 }
@@ -65,11 +72,47 @@ article {
         }
     }
 }
+section {
+    width: 90%;
+    height: auto;
+    padding: 16px;
+    .cards-toy-section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+        .product-card {
+            width: 250px;
+            height: auto;
+            background-color: $background;
+            box-shadow: $button-shadow;
+            border-radius: 10px;
+            border: 1px solid $primary-color;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            .product-fav-icon {
+                width: 90%;
+                margin-top: 10px;
+                display: flex;
+                justify-content: flex-end;
+            }
+            img {
+                width: 230px;
+            }
+            .product-description {
+                padding: 10px;
+                p {
+                    color: $primary-text-color;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
-    // body {
-    //     // background-color: red;
-    // }
     nav {
         flex-direction: row;
         justify-content: space-between;
@@ -96,11 +139,11 @@ article {
             text-align: left;
         }
     }
+    section {
+        padding: 40px;
+    }
 }
 @media (min-width: 1280px) {
-    // body {
-    //     // background-color: blue;
-    // }
     article {
         justify-content: space-evenly;
         margin: 120px;
