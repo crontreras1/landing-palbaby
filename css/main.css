@@ -18,10 +18,8 @@ nav p {
   margin: 0px;
 }
 nav .icons button {
-  border: none;
-  background-color: white;
-  margin-top: 10px;
-  cursor: pointer;
+  background: none;
+  border-style: none;
 }
 nav .icons .wishlist path:hover {
   stroke: red;
@@ -32,6 +30,7 @@ article {
   color: #6c8484;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: center;
   align-items: center;
   text-align: center;
   height: auto;
