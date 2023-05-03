@@ -64,7 +64,7 @@ section {
   height: auto;
   padding: 16px;
 }
-section .cards-toy-section {
+section .cards-toy-section, section .care-section .cards-care-section {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -76,7 +76,7 @@ section .cards-toy-section {
        column-gap: 50PX;
   margin-bottom: 50px;
 }
-section .cards-toy-section .product-card {
+section .cards-toy-section .product-card, section .care-section .cards-care-section .product-card {
   width: 250px;
   height: auto;
   background-color: white;
@@ -88,29 +88,32 @@ section .cards-toy-section .product-card {
   align-items: center;
   gap: 5px;
 }
-section .cards-toy-section .product-card .product-fav-icon {
+section .cards-toy-section .product-card .product-fav-icon, section .care-section .cards-care-section .product-card .product-fav-icon {
   width: 90%;
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
 }
-section .cards-toy-section .product-card .product-image {
+section .cards-toy-section .product-card .product-image, section .care-section .cards-care-section .product-card .product-image {
   width: 230px;
   height: 230px;
 }
-section .cards-toy-section .product-card .product-image img {
+section .cards-toy-section .product-card .product-image img, section .care-section .cards-care-section .product-card .product-image img {
   width: 230px;
 }
-section .cards-toy-section .product-card .product-description {
+section .cards-toy-section .product-card .product-description, section .care-section .cards-care-section .product-card .product-description {
   padding: 10px;
   width: 80%;
   padding-left: 20px;
 }
-section .cards-toy-section .product-card .product-description p {
+section .cards-toy-section .product-card .product-description p, section .care-section .cards-care-section .product-card .product-description p {
   color: #6c8484;
   font-size: 12px;
 }
-
+section .care-section {
+  display: flex;
+  flex-direction: column;
+}
 @media (min-width: 768px) {
   nav {
     flex-direction: row;
@@ -139,7 +142,7 @@ section .cards-toy-section .product-card .product-description p {
   section {
     padding: 40px;
   }
-  section .cards-toy-section {
+  section .cards-toy-section, section .care-section .cards-care-section {
     justify-content: flex-start;
   }
 }

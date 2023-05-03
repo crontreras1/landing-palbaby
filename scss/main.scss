@@ -121,6 +121,13 @@ section {
             }
         }
     }
+    .care-section {
+        display: flex;
+        flex-direction: column;
+        .cards-care-section {
+            @extend .cards-toy-section;
+        }
+    }
 }
 
 @media (min-width: 768px) {
