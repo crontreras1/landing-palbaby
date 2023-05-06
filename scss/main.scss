@@ -133,18 +133,34 @@ section {
     }
 }
 .info-section {
+    width: auto;
     .about-us {
         .info-content {
             margin: 100px 0;
             .pets {
                 @include flexCenter(column, center, center);
-                img {
-                    width: 200px;
+                .pet-image {
+                    img {
+                        height: 200px;
+                        width: 200px;
+                        object-fit: cover;
+                    }
                 }
                 p {
                     text-align: center;
                 }
             }
+        }
+    }
+}
+.gallery {
+    .gallery-images {
+        @include flexCenter(column, center, center);
+        row-gap: 20px;        
+        img {
+            width: 250px;
+            height: 310px;
+            object-fit: cover;
         }
     }
 }
@@ -179,12 +195,26 @@ section {
     section {
         padding: 40px;
         .cards-toy-section {
-            justify-content: flex-start;
+            justify-content: center;
         }
     }
-    .info-content {
-        @include flexCenter(flex, center, center);
-        gap: 50px;
+    .info-section {
+        .about-us {
+            .info-content {
+                @include flexCenter(flex, center, center);
+                gap: 50px;
+                .pets {
+                    img {
+                        width: 290px;
+                    }
+                }
+            }
+        }
+    }
+    .gallery {
+        .gallery-images {
+            @include flexCenter(row, center, center)
+        }
     }
 }
 @media (min-width: 1280px) {
@@ -192,7 +222,22 @@ section {
         justify-content: space-evenly;
         margin: 120px;
     }
-    .info-content {
-        justify-content: space-evenly;
+    .info-section {
+        margin: 0;
+        .about-us {
+            .info-content {
+                justify-content: space-evenly;
+                .pets {
+                    @include flexCenter(row, center, center);
+                    gap: 20px;
+                    background-color: $primary-color;
+                    p {
+                        font-size: 20px;
+                        width: 30%;
+                        margin: 10px;
+                    }
+                }
+            }
+        }
     }
 }

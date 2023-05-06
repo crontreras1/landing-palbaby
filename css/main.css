@@ -113,6 +113,9 @@ section .care-section {
   display: flex;
   flex-direction: column;
 }
+.info-section {
+  width: auto;
+}
 .info-section .about-us .info-content {
   margin: 100px 0;
 }
@@ -122,11 +125,28 @@ section .care-section {
   justify-content: center;
   align-items: center;
 }
-.info-section .about-us .info-content .pets img {
+.info-section .about-us .info-content .pets .pet-image img {
+  height: 200px;
   width: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .info-section .about-us .info-content .pets p {
   text-align: center;
+}
+
+.gallery .gallery-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+.gallery .gallery-images img {
+  width: 250px;
+  height: 310px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -158,14 +178,23 @@ section .care-section {
     padding: 40px;
   }
   section .cards-toy-section, section .care-section .cards-care-section {
-    justify-content: flex-start;
+    justify-content: center;
   }
-  .info-content {
+  .info-section .about-us .info-content {
     display: flex;
     flex-direction: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
+  }
+  .info-section .about-us .info-content .pets img {
+    width: 290px;
+  }
+  .gallery .gallery-images {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }
 @media (min-width: 1280px) {
@@ -173,7 +202,23 @@ section .care-section {
     justify-content: space-evenly;
     margin: 120px;
   }
-  .info-content {
+  .info-section {
+    margin: 0;
+  }
+  .info-section .about-us .info-content {
     justify-content: space-evenly;
+  }
+  .info-section .about-us .info-content .pets {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #dad2c1;
+  }
+  .info-section .about-us .info-content .pets p {
+    font-size: 20px;
+    width: 30%;
+    margin: 10px;
   }
 }/*# sourceMappingURL=main.css.map */
