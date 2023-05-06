@@ -132,6 +132,22 @@ section {
         }
     }
 }
+.info-section {
+    .about-us {
+        .info-content {
+            margin: 100px 0;
+            .pets {
+                @include flexCenter(column, center, center);
+                img {
+                    width: 200px;
+                }
+                p {
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: 768px) {
     nav {
@@ -166,10 +182,17 @@ section {
             justify-content: flex-start;
         }
     }
+    .info-content {
+        @include flexCenter(flex, center, center);
+        gap: 50px;
+    }
 }
 @media (min-width: 1280px) {
     article {
         justify-content: space-evenly;
         margin: 120px;
+    }
+    .info-content {
+        justify-content: space-evenly;
     }
 }

@@ -113,6 +113,22 @@ section .care-section {
   display: flex;
   flex-direction: column;
 }
+.info-section .about-us .info-content {
+  margin: 100px 0;
+}
+.info-section .about-us .info-content .pets {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info-section .about-us .info-content .pets img {
+  width: 200px;
+}
+.info-section .about-us .info-content .pets p {
+  text-align: center;
+}
+
 @media (min-width: 768px) {
   nav {
     flex-direction: row;
@@ -144,10 +160,20 @@ section .care-section {
   section .cards-toy-section, section .care-section .cards-care-section {
     justify-content: flex-start;
   }
+  .info-content {
+    display: flex;
+    flex-direction: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 }
 @media (min-width: 1280px) {
   article {
     justify-content: space-evenly;
     margin: 120px;
+  }
+  .info-content {
+    justify-content: space-evenly;
   }
 }/*# sourceMappingURL=main.css.map */
