@@ -149,6 +149,34 @@ section .care-section {
      object-fit: cover;
 }
 
+.footer-container {
+  background-color: #dad2c1;
+  width: 100%;
+  height: auto;
+}
+.footer-container h3 {
+  padding: 20px 10px;
+}
+.footer-container .last-info p {
+  padding-left: 10px;
+}
+.footer-container .social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+}
+
+.by {
+  background-color: #ad892a;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  font-size: 10px;
+}
+
 @media (min-width: 768px) {
   nav {
     flex-direction: row;
@@ -195,6 +223,16 @@ section .care-section {
     flex-direction: row;
     justify-content: center;
     align-items: center;
+  }
+  .footer-container h3 {
+    padding-left: 50px;
+  }
+  .footer-container .last-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
   }
 }
 @media (min-width: 1280px) {

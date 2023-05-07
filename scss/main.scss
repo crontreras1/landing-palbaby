@@ -164,7 +164,32 @@ section {
         }
     }
 }
+.footer-container {
+    background-color: $primary-color;
+    width: 100%;
+    height: auto;
+    h3 {
+        padding: 20px 10px;
+    }
+    .last-info {
+        p {
+            padding-left: 10px;
+        }
+    }
+    .social-media {
+        @include flexCenter(row, center, center);
+        gap: 10px;
+        padding: 20px 10px;
 
+    }
+}
+.by {
+    background-color: $tertiary-color;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    font-size: 10px;
+}
 @media (min-width: 768px) {
     nav {
         flex-direction: row;
@@ -214,6 +239,15 @@ section {
     .gallery {
         .gallery-images {
             @include flexCenter(row, center, center)
+        }
+    }
+    .footer-container {
+        h3 {
+            padding-left: 50px
+        }
+        .last-info {
+            @include flexCenter(row, space-between, center);
+            padding: 30px;
         }
     }
 }
